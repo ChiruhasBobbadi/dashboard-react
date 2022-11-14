@@ -1,6 +1,8 @@
 
 import Login from "./components/Login/Login/login";
+import Home from "./components/home"
 import { Route, Routes,BrowserRouter as Router } from "react-router-dom";
+import Dashboard from "./components/Dashboard";
 
 
 
@@ -8,10 +10,12 @@ import { Route, Routes,BrowserRouter as Router } from "react-router-dom";
 function App() {
   return (
       <Router>
+
           <Routes>
               <Route exact path='/' element={<Login/>}></Route>
+              <Route path='/home' element={<Dashboard/>}> </Route>
 
-              <Route exact path='/' element={<Login/>}></Route>
+
           </Routes>
       </Router>
 
