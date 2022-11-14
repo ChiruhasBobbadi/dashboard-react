@@ -5,8 +5,8 @@ import Row from "react-bootstrap/Row";
 import LeftNavBar from "./LeftNavBar/LeftNavBar";
 import NavBarLoggedIn from "./Navbar/NavBarLoggedIn";
 import Home from "./home";
-import deviceManagement from "./DeviceManagement";
-import DeviceManagement from "./DeviceManagement";
+import deviceManagement from "./DeviceManagement/DeviceManagement";
+import DeviceManagement from "./DeviceManagement/DeviceManagement";
 
 
 function Dashboard() {

@@ -1,9 +1,14 @@
 
 import Container from "react-bootstrap/Container";
-import {Nav, Navbar} from "react-bootstrap";
+import {Nav, Navbar, Table} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Fan from "./Light";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Login from "../Login/Login/login";
+import Dashboard from "../Dashboard";
+import Light from "./Light";
 
 
 const DeviceManagement = ()=>{
@@ -26,8 +31,7 @@ const DeviceManagement = ()=>{
                 </Container>
             </Navbar>
 
-
-
+        <Light/>
 
         </>
 
