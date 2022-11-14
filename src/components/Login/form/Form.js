@@ -40,14 +40,14 @@ const [message, setMessage] = useState(errorMessage);
        const data = response.data;
 
        if(data.status===200){
-           // go to home
+           // go to Home
 
            sessionStorage.setItem('userId', data.userId);
 
            if(data.isAdmin)
                navigate("/admin");
            else
-             navigate("/home");
+             navigate("/Home");
        }else{
            // display error.
             setMessage(response.data.message);
