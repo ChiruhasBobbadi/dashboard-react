@@ -6,8 +6,8 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import DeviceManagement from "./DeviceManagement";
-import DeviceManagementRowLight from "./DeviceManagementRowLight";
+import DeviceManagement from "../DeviceManagement";
+import LightRow from "./LightRow";
 import Form from "react-bootstrap/Form";
 
 
@@ -97,6 +97,14 @@ const onAddClickHandler = async (event)=>{
 
     await axios.post('http://localhost:4000/addDevice',data)
 
+    const lightData = await axios.post('http://localhost:4000/allDevices',{
+        type:'light',
+        data:{
+            id:userId
+        }
+    });
+    setData([...lightData.data.data]);
+
 
     handleCloseAddModal();
 
@@ -122,6 +130,8 @@ const update = async()=>{
         setData([...lightData.data.data]);
     }
 
+    call();
+
 }
 
 
@@ -133,7 +143,7 @@ const update = async()=>{
 
            </Col>
            <Col lg={2}>
-               <Button variant="success" onClick={handleShowAddModal} style={{justifySelf:'right'}}>Add Light</Button>
+               <Button variant="success" onClick={handleShowAddModal} style={{justifySelf:'right'}}>Add light</Button>
            </Col>
        </Row>
        <br/>
@@ -150,7 +160,7 @@ const update = async()=>{
 
            {data.map(d=>
 
-               <DeviceManagementRowLight data={d} key={d.id} onDeleteHandler={deleteDevice} onUpdateHandler={{update}} />
+               <LightRow data={d} key={d.id} onDeleteHandler={deleteDevice} onUpdateHandler={update} />
             )}
 
            </tbody>

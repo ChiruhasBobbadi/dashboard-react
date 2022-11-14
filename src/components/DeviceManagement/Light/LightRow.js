@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form';
 import axios from "axios";
 
 
-const DeviceManagementRowLight = (props)=>{
+const LightRow = (props)=>{
 
 
     const [show, setShow] = useState(false);
@@ -90,7 +90,7 @@ const DeviceManagementRowLight = (props)=>{
         {/*view modal*/}
         <Modal show={show} onHide={handleClose}  size="xl">
             <Modal.Header closeButton>
-                <Modal.Title>View Light Information</Modal.Title>
+                <Modal.Title>View light Information</Modal.Title>
             </Modal.Header>
             <Modal.Body>
 
@@ -164,7 +164,7 @@ const DeviceManagementRowLight = (props)=>{
         <Modal  show={showUpdateModal} onHide={handleCloseUpdateModal}  size="xl">
             <Form onSubmit={onUpdateClickHandler}>
             <Modal.Header closeButton>
-                <Modal.Title>View Light Information</Modal.Title>
+                <Modal.Title>View light Information</Modal.Title>
             </Modal.Header>
             <Modal.Body>
 
@@ -304,4 +304,4 @@ const DeviceManagementRowLight = (props)=>{
     </>
 }
 
-export default DeviceManagementRowLight;
+export default LightRow;
