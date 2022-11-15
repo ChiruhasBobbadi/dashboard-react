@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form';
 import axios from "axios";
 
 
-const waterMeterRow = (props)=>{
+const WaterMeterRow = (props)=>{
 
 
     const [show, setShow] = useState(false);
@@ -304,4 +304,4 @@ const waterMeterRow = (props)=>{
     </>
 }
 
-export default waterMeterRow;
+export default WaterMeterRow;

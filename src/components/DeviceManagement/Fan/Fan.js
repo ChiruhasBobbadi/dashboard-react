@@ -31,7 +31,7 @@ const Fan=()=>{
             const fanData = await axios.post('http://localhost:4000/allDevices',{
                 type:'fan',
                 data:{
-                    userId:1
+                    id:1
                 }
             });
             console.log(fanData.data.data);
@@ -57,7 +57,7 @@ const Fan=()=>{
         })
 
         const newData = data.filter(d=>{
-            if(d.d!=deviceData.id)
+            if(d.id!=deviceData.id)
                 return d;
         });
 
@@ -70,13 +70,15 @@ const Fan=()=>{
         event.preventDefault();
         const userId = sessionStorage.getItem("userId");
 
+
+        //todo
         let d = event.target;
         const data =
             {
                 "type": "fan",
                 "data": {
                     "device_name":d.deviceName.value,
-                    "userId":userId,
+                    "userId":1,
                     "model" : d.model.value,
                     "installation_date":d.installationDate.value,
                     "id":d.deviceId.value,
@@ -99,7 +101,7 @@ const Fan=()=>{
         const fanData = await axios.post('http://localhost:4000/allDevices',{
             type:'fan',
             data:{
-                id:userId
+                id:1
             }
         });
         setData([...fanData.data.data]);
@@ -121,7 +123,7 @@ const Fan=()=>{
             const fanData = await axios.post('http://localhost:4000/allDevices',{
                 type:'fan',
                 data:{
-                    userId:id
+                    id:1
                 }
             });
             console.log(fanData.data.data);

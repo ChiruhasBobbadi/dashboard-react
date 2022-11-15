@@ -8,7 +8,7 @@ const LeftMenu = ()=> {
         return <>
                 <Nav defaultActiveKey="/home" className="flex-column" bg="dark" variant="dark">
                         <Nav.Link href="/home">  Home</Nav.Link>
-                        <Nav.Link eventKey="link-1">Device Management</Nav.Link>
+                        <Nav.Link href="/deviceManagement">Device Management</Nav.Link>
                         <Nav.Link eventKey="link-2">Monitor & tracking</Nav.Link>
                         <Nav.Link eventKey="link-2">Control & Configure</Nav.Link>
                       

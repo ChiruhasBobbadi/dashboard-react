@@ -7,27 +7,20 @@ import NavBarLoggedIn from "./Navbar/NavBarLoggedIn";
 import Home from "./home";
 import deviceManagement from "./DeviceManagement/DeviceManagement";
 import DeviceManagement from "./DeviceManagement/DeviceManagement";
+import ControlConfigure from "./ControlConfigure/ControlConfigure";
 
 
 function Dashboard() {
     return (<>
-        <NavBarLoggedIn></NavBarLoggedIn>
+        <NavBarLoggedIn/>
         <Row>
-            <Col lg={2}> <LeftNavBar></LeftNavBar> </Col>
+            <Col lg={2}> <LeftNavBar/> </Col>
             <Col lg={10}>
-
-                {/*<Home></Home>*/}
-
-          {/*<deviceManagement> </deviceManagement>*/}
-
-            <DeviceManagement/>
-
-
-
-
+                <Home/>
             </Col>
-
         </Row>
+
+
 
     </>);
 

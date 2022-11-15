@@ -34,14 +34,14 @@ const FanRow = (props)=>{
 
         event.preventDefault();
         const userId = sessionStorage.getItem("userId");
-
+        //todo change userId
         let d = event.target;
         const data =
             {
                 "type": "fan",
                 "data": {
                     "device_name":d.deviceName.value,
-                    "userId":userId,
+                    "userId":1,
                     "model" : d.model.value,
                     "installation_date":d.installationDate.value,
                     "id":d.deviceId.value,
