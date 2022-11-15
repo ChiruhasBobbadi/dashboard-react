@@ -1,6 +1,6 @@
 .main--title {
     margin-top: 10% ;
-    text-align: left;
+    text-align: center;
     font-size: 29px;
     letter-spacing: -0.05em;
 }
@@ -9,10 +9,10 @@
     margin-top: 10%;
     margin-left:30%;
     width: 400px;
-    background-color: #ADD8E6;
+    background-color: #7ce0ae;
     padding: 50px;
 
-    box-shadow: 5px 10px #888888;
+    box-shadow: 5px 10px #738b74;
 }
 
 .main--facts > li {
@@ -22,6 +22,7 @@
 
 .button-invoice {
     margin: 20px;
-    background-color: #ADD8E6;
-    box-shadow: 2px 4px #888888;
+    align-items: center;
+    background-color: #9ed7af;
+    box-shadow: 2px 4px #9eb6a3;
 }

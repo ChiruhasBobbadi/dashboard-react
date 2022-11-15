@@ -51,9 +51,9 @@ const Billing=()=> {
     <NavBarLoggedIn/>
     <Row>
         <Col lg={2}> <LeftNavBar/> </Col>
-        <Col lg={10}>
+        <Col lg={5}>
             <main>
-                <h1 className="main--title">Pending Bills</h1>
+                <h1 className="main--title">                      Pending Bills</h1>
                 <div className="main--facts" >
                     <p>Name : {data.name}</p>
                     <p>Bill ID : 110ec58a-a0f2-4ac4-8393-c866d813b8d1</p>

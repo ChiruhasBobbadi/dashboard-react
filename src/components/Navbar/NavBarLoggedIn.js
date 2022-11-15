@@ -34,6 +34,7 @@ const Navbar2 =(props)=>{
                     Smart Meter System
                 </Navbar.Brand>
                 <Navbar.Toggle />
+            </Container>
                 <Navbar.Collapse  className="justify-content-end">
 
                     <Navbar.Brand href="/profile" style={{color:"white",marginLeft:'5%'}}>
@@ -49,7 +50,7 @@ const Navbar2 =(props)=>{
 
                 </Navbar.Collapse>
 
-            </Container>
+            
         </Navbar>
     </>
 
