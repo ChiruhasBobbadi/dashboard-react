@@ -1,7 +1,7 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import {useState} from "react";
+import React, {useState} from "react";
 import {Modal} from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Form from 'react-bootstrap/Form';
@@ -34,14 +34,14 @@ const WaterMeterRow = (props)=>{
 
         event.preventDefault();
         const userId = sessionStorage.getItem("userId");
-
+        //todo change userId
         let d = event.target;
         const data =
             {
-                "type": "waterMeter",
+                "type": "water_meter",
                 "data": {
                     "device_name":d.deviceName.value,
-                    "userId":userId,
+                    "userId":1,
                     "model" : d.model.value,
                     "installation_date":d.installationDate.value,
                     "id":d.deviceId.value,
@@ -52,7 +52,7 @@ const WaterMeterRow = (props)=>{
                     "power":d.power.value,
                     "battery_cell_type": d.battery_cell_type.value,
                     "batteries_included":d.batteries_included.value,
-
+                    "metric" : d.metric.value
                 }
 
 
@@ -143,6 +143,7 @@ const WaterMeterRow = (props)=>{
                         Power : {props.data.power}
                     </Col>
                     <Col lg={4}>
+                        Metric : {props.data.metric}
 
                     </Col>
 
@@ -274,6 +275,11 @@ const WaterMeterRow = (props)=>{
                         </Col>
                         <Col lg={4}>
 
+                            Metric : <Form.Control
+                            type="text"
+                            id="metric"
+                            required={true}
+                        />
 
                         </Col>
 

@@ -13,6 +13,9 @@ import {Nav, Navbar} from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import ControlConfigure from "./components/ControlConfigure/ControlConfigure";
+import Billing from "./components/Billing/Billing";
+import Invoice from "./components/Billing/Invoice";
+import React from "react";
 
 
 
@@ -41,9 +44,10 @@ function App() {
                                   <Route path='/controlConfigure' element={<ControlConfigure/>}></Route>
 
 
+                                    <Route path='/monitor'></Route>
                                   <Route path='/billing' element={<Billing/>}></Route>
 
-
+                                  <Route path="/invoice" element={<Invoice />}></Route>
 
 
 

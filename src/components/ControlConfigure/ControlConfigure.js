@@ -15,33 +15,11 @@ import Home from "../home";
 const ControlConfigure = ()=> {
 
 
-    // const val = [{
-    //     type:'fan',
-    //     data:{
-    //         id:1,
-    //         checked:true,
-    //         name:'chiruhas'
-    //     }
-    //
-    // },{
-    //     type:'fan',
-    //     data:{
-    //         id:2,
-    //         checked:false,
-    //         name:'!chiruhas'
-    //     }
-    // }
-    // ]
-    //
-    //
-    // ;
-
-
 
     const val=[];
 
     const [data,setData] = useState(val);
-    const [device,setDevice] = useState("Fan");
+    const [device,setDevice] = useState("fan");
 
 
     React.useEffect( () => {
@@ -50,24 +28,20 @@ const ControlConfigure = ()=> {
             const id = sessionStorage.getItem("userId");
 
             const fanData = await axios.post('http://localhost:4000/getAllDevices',{
-                type:'fan',
+                type:device,
                 data:{
                     id:1
                 }
             });
 
-            console.log(fanData.data.data);
-
             const t =  fanData.data.data.map(m=>{
                 return {
-                    'type':'fan',
+                    'type':device,
                     data:{
                         ...m
                     }
                 }
             })
-
-            console.log(t);
 
 
             setData([...t]);
@@ -83,11 +57,9 @@ const ControlConfigure = ()=> {
         const deviceData = await axios.post('http://localhost:4000/getAllDevices',{
             type:type,
             data:{
-                id:id
+                id:1
             }
         });
-
-
 
         const t = deviceData.data.data.map(m=>{
             return {
@@ -97,13 +69,15 @@ const ControlConfigure = ()=> {
                 }
             }
         })
-
+        setDevice(type)
         setData([...t]);
     }
 
     const clickHandler = async (event)=> {
 
         event.preventDefault();
+
+        setData([])
 
         let type='';
         switch(event.target.innerText){
@@ -116,19 +90,17 @@ const ControlConfigure = ()=> {
             case 'Camera':
                 type='camera';
                 break;
-            case 'Water Meter':
+            case 'Water_Meter':
                 type='water_meter'
                 break;
-            case 'Electricity Meter':
+            case 'Electricity_Meter':
                 type='electricity_meter'
                 break;
-            case 'Weather Sensor':
-                type='weather_Sensor'
+            case 'Weather_Sensor':
+                type='weather_sensor'
                 break;
 
         }
-
-        setDevice(type);
 
         await call(type);
     }
@@ -165,7 +137,7 @@ const ControlConfigure = ()=> {
 
         const t =  newData.data.data.map(m=>{
             return {
-                'type':'fan',
+                'type':type,
                 data:{
                     ...m
                 }
@@ -190,17 +162,17 @@ const ControlConfigure = ()=> {
         <Row>
             <Col lg={2}> <LeftNavBar/> </Col>
             <Col lg={10}>
-                <Navbar expand="lg" variant="fan" bg="fan" fluid>
-                    <Container>
-                        <Nav className="me-auto">
-                            <Nav.Link onClick={clickHandler} >Fan</Nav.Link>
-                            <Nav.Link  onClick={clickHandler} style={{marginLeft:'20%'}} >Light</Nav.Link>
-                            <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Camera</Nav.Link>
-                            <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Water Meter</Nav.Link>
-                            <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Electricity Meter</Nav.Link>
-                            <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Weather Sensor</Nav.Link>
-                        </Nav>
-                    </Container>
+                <Navbar expand="lg" variant="light" bg="light" fluid="true">
+
+                    <Nav>
+                        <Nav.Link onClick={clickHandler} style={{marginLeft:"10%"}}>Fan </Nav.Link>
+                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}} >Light</Nav.Link>
+                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>camera</Nav.Link>
+                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Water_Meter</Nav.Link>
+                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Electricity_Meter</Nav.Link>
+                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Weather_Sensor</Nav.Link>
+                    </Nav>
+
                 </Navbar>
 
                 <h2 style={{textAlign:"center", marginTop:"5%"}}> {device} Data</h2>
@@ -224,6 +196,7 @@ const ControlConfigure = ()=> {
                         </tbody>
                     </Table>
                 </Container>
+
             </Col>
         </Row>
 

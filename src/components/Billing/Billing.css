@@ -1,15 +1,17 @@
 .main--title {
-    margin: 0;
+    margin-top: 10% ;
+    text-align: left;
     font-size: 29px;
     letter-spacing: -0.05em;
 }
 
 .main--facts {
-    margin-top: 46px;
-    max-width: 400px;
+    margin-top: 10%;
+    margin-left:30%;
+    width: 400px;
     background-color: #ADD8E6;
     padding: 50px;
-    margin: 20px;
+
     box-shadow: 5px 10px #888888;
 }
 

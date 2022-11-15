@@ -9,14 +9,15 @@ const NavBar =()=> {
 <>
     <Navbar bg="dark" variant="dark">
         <Container>
-            <Navbar.Brand href="">
+            <Navbar.Brand href="" style={{fontSize:'35px'}}>
                 <img
                     alt=""
                     src={logo}
-                    width="40"
-                    height="40"
+                    width="50"
+                    height="50"
                     className="d-inline-block align-top"
-                />{' '}
+                />
+                {" "}
                 Green Energy Cloud
             </Navbar.Brand>
         </Container>

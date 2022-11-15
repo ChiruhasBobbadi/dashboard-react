@@ -43,7 +43,8 @@ const [message, setMessage] = useState(errorMessage);
            // go to home
 
            sessionStorage.setItem('userId', data.userId);
-
+           sessionStorage.setItem('userName', data.name);
+           console.log(data.name);
            if(data.isAdmin)
                navigate("/admin");
            else

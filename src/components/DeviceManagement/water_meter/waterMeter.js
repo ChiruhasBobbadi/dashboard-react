@@ -29,9 +29,9 @@ const WaterMeter=()=>{
             const id = sessionStorage.getItem("userId");
             console.log(id);
             const WaterMeterData = await axios.post('http://localhost:4000/allDevices',{
-                type:'waterMeter',
+                type:'water_meter',
                 data:{
-                    userId:1
+                    id:1
                 }
             });
             console.log(WaterMeterData.data.data);
@@ -50,14 +50,14 @@ const WaterMeter=()=>{
 
 
         await axios.post('http://localhost:4000/deleteDevice',{
-            type:'waterMeter',
+            type:'water_meter',
             data:{
                 id:deviceData.id
             }
         })
 
         const newData = data.filter(d=>{
-            if(d.d!=deviceData.id)
+            if(d.id!=deviceData.id)
                 return d;
         });
 
@@ -69,14 +69,14 @@ const WaterMeter=()=>{
     const onAddClickHandler = async (event)=>{
         event.preventDefault();
         const userId = sessionStorage.getItem("userId");
-
+        //todo change USerId
         let d = event.target;
         const data =
             {
-                "type": "waterMeter",
+                "type": "water_meter",
                 "data": {
                     "device_name":d.deviceName.value,
-                    "userId":userId,
+                    "userId":1,
                     "model" : d.model.value,
                     "installation_date":d.installationDate.value,
                     "id":d.deviceId.value,
@@ -87,7 +87,7 @@ const WaterMeter=()=>{
                     "power":d.power.value,
                     "batteries_included": d.batteries_included.value,
                     "battery_cell_type":d.battery_cell_type.value,
-
+                    "metric":d.metric.value
                 }
 
 
@@ -97,9 +97,9 @@ const WaterMeter=()=>{
 
         await axios.post('http://localhost:4000/addDevice',data)
         const WaterMeterData = await axios.post('http://localhost:4000/allDevices',{
-            type:'waterMeter',
+            type:'water_meter',
             data:{
-                id:userId
+                id:1
             }
         });
         setData([...WaterMeterData.data.data]);
@@ -119,9 +119,9 @@ const WaterMeter=()=>{
             const id = sessionStorage.getItem("userId");
             //console.log(id);
             const WaterMeterData = await axios.post('http://localhost:4000/allDevices',{
-                type:'waterMeter',
+                type:'water_meter',
                 data:{
-                    userId:id
+                    id:1
                 }
             });
             console.log(WaterMeterData.data.data);
@@ -271,7 +271,11 @@ const WaterMeter=()=>{
                         />
                         </Col>
                         <Col lg={4}>
-
+                            Metric (gallons per second) : <Form.Control
+                            type="text"
+                            id="metric"
+                            required={true}
+                        />
 
                         </Col>
 
