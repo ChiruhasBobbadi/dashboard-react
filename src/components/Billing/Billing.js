@@ -9,6 +9,7 @@ import Col from "react-bootstrap/Col";
  import LeftNavBar from "../LeftNavBar/LeftNavBar";
 import Home from "../home";
 import axios from "axios";
+import InvoiceDownloader from "./DownloadInvoice/download"
 
 
 
@@ -63,7 +64,7 @@ const Billing=()=> {
                 </div>
                 <button className="button-invoice" type="button" onClick={goToInvoice} style={{marginLeft:'40%'}}>Generate Invoice</button>
                 <Routes>
-                    <Route path="/invoice" element={<Invoice />} />
+                    <Route path="/invoice" element={<InvoiceDownloader />} />
                 </Routes>
             </main>
         </Col>

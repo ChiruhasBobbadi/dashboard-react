@@ -9,7 +9,7 @@ const DeviceManagmentNavBar =()=>{
     const location = useLocation();
     const path = location.pathname.split('/')[2];
 
-   return <Navbar expand="lg" variant="light" bg="light" fluid="true">
+   return <Navbar expand="lg" variant="dark" bg="dark" fluid="true"  style={{color:"white",marginTop:'2%'}}>
 
             <Nav>
                 {/* <NavLink>Fan</NavLink> */}
