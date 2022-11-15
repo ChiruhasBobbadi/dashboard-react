@@ -9,6 +9,7 @@ import Row from "react-bootstrap/Row";
 import DeviceManagement from "../DeviceManagement";
 import FanRow from "./FanRow";
 import Form from "react-bootstrap/Form";
+import background from  "../../../images/fan.jpeg"
 
 
 
@@ -136,7 +137,7 @@ const Fan=()=>{
 
 
 
-    return <Container style={{marginTop:"5%"}}>
+    return <Container style={{marginTop:"5%" }}>
 
         <Row>
             <Col lg={10}>
@@ -148,7 +149,7 @@ const Fan=()=>{
         </Row>
         <br/>
 
-        <Table bordered>
+        <Table bordered style={{ border: 100, bordercolor: "red" }}>
             <thead>
             <tr>
                 <th>Device Id</th>
