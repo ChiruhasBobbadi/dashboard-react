@@ -16,6 +16,7 @@ import ControlConfigure from "./components/ControlConfigure/ControlConfigure";
 import Billing from "./components/Billing/Billing";
 import Invoice from "./components/Billing/Invoice";
 import React from "react";
+import MonitorAndTrack from "./components/Monitor/MonitorAndTrack";
 
 
 
@@ -23,9 +24,6 @@ import React from "react";
 function App() {
   return (
       <>
-
-
-
 
                           <Router>
                               <Routes>
@@ -42,6 +40,8 @@ function App() {
                                   <Route path='/deviceManagement/weather' element={<DeviceManagement/>}></Route>
 
                                   <Route path='/controlConfigure' element={<ControlConfigure/>}></Route>
+
+                                  <Route path='/monitorandtrack' element={<MonitorAndTrack/>}></Route>
 
 
                                     <Route path='/monitor'></Route>

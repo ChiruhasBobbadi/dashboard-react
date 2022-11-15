@@ -34,7 +34,8 @@ const Navbar2 =(props)=>{
                     Green Energy Cloud
                 </Navbar.Brand>
                 <Navbar.Toggle />
-                <Navbar.Collapse  className="justify-content-end">
+            </Container>
+            <Navbar.Collapse  className="justify-content-end">
 
                     <Navbar.Text style={{color:"white",marginLeft:'5%'}}>
                         Hello, {sessionStorage.getItem("userName")}! <BiUserCircle style={{fontSize:'35px'} }/>
@@ -46,9 +47,7 @@ const Navbar2 =(props)=>{
                     </Navbar.Text>
 
 
-                </Navbar.Collapse>
-
-            </Container>
+            </Navbar.Collapse>
         </Navbar>
     </>
 
