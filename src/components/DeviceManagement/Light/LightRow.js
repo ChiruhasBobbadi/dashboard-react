@@ -34,14 +34,14 @@ const LightRow = (props)=>{
 
         event.preventDefault();
         const userId = sessionStorage.getItem("userId");
-
+        //todo change userID
         let d = event.target;
         const data =
             {
                 "type": "light",
             "data": {
             "device_name":d.deviceName.value,
-            "userId":userId,
+            "userId":1,
             "model" : d.model.value,
             "installation_date":d.installationDate.value,
                 "id":d.deviceId.value,

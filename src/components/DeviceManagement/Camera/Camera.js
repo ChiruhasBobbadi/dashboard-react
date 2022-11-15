@@ -27,7 +27,8 @@ const Camera=()=>{
 
         const call = async ()=>{
             const id = sessionStorage.getItem("userId");
-            console.log(id);
+
+            //todo change userId later
             const cameraData = await axios.post('http://localhost:4000/allDevices',{
                 type:'camera',
                 data:{
@@ -57,7 +58,7 @@ const Camera=()=>{
         })
 
         const newData = data.filter(d=>{
-            if(d.d!=deviceData.id)
+            if(d.id!=deviceData.id)
                 return d;
         });
 
@@ -69,14 +70,14 @@ const Camera=()=>{
     const onAddClickHandler = async (event)=>{
         event.preventDefault();
         const userId = sessionStorage.getItem("userId");
-
+        // todo change userID later
         let d = event.target;
         const data =
             {
                 "type": "camera",
                 "data": {
                     "device_name":d.deviceName.value,
-                    "userId":userId,
+                    "userId":1,
                     "model" : d.model.value,
                     "installation_date":d.installationDate.value,
                     "id":d.deviceId.value,
@@ -87,19 +88,14 @@ const Camera=()=>{
                     "power":d.power.value,
                     "resolution": d.resolution.value,
                     "lens":d.lens.value,
-
                 }
-
-
             }
-
-
 
         await axios.post('http://localhost:4000/addDevice',data)
         const cameraData = await axios.post('http://localhost:4000/allDevices',{
             type:'camera',
             data:{
-                id:userId
+                userId:1
             }
         });
         setData([...cameraData.data.data]);
@@ -118,10 +114,11 @@ const Camera=()=>{
         const call = async ()=>{
             const id = sessionStorage.getItem("userId");
             //console.log(id);
+            // todo change userID later
             const cameraData = await axios.post('http://localhost:4000/allDevices',{
                 type:'camera',
                 data:{
-                    userId:id
+                    userId:1
                 }
             });
             console.log(cameraData.data.data);

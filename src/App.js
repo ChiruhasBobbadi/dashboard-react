@@ -12,6 +12,7 @@ import Col from "react-bootstrap/Col";
 import {Nav, Navbar} from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import ControlConfigure from "./components/ControlConfigure/ControlConfigure";
 
 
 
@@ -37,8 +38,10 @@ function App() {
                                   <Route path='/deviceManagement/electricity' element={<DeviceManagement/>}></Route>
                                   <Route path='/deviceManagement/weather' element={<DeviceManagement/>}></Route>
 
+                                  <Route path='/controlConfigure' element={<ControlConfigure/>}></Route>
 
 
+                                  <Route path='/billing' element={<Billing/>}></Route>
 
 
 

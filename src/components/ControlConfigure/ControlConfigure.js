@@ -7,6 +7,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import fan from "../DeviceManagement/Fan/Fan";
+import NavBarLoggedIn from "../Navbar/NavBarLoggedIn";
+import LeftNavBar from "../LeftNavBar/LeftNavBar";
+import Home from "../home";
 
 
 const ControlConfigure = ()=> {
@@ -183,40 +186,47 @@ const ControlConfigure = ()=> {
 
     return <>
 
-        <Navbar expand="lg" variant="fan" bg="fan" fluid>
-            <Container>
-                <Nav className="me-auto">
-                    <Nav.Link onClick={clickHandler} >Fan</Nav.Link>
-                    <Nav.Link  onClick={clickHandler} style={{marginLeft:'20%'}} >Light</Nav.Link>
-                    <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Camera</Nav.Link>
-                    <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Water Meter</Nav.Link>
-                    <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Electricity Meter</Nav.Link>
-                    <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Weather Sensor</Nav.Link>
-                </Nav>
-            </Container>
-        </Navbar>
+        <NavBarLoggedIn/>
+        <Row>
+            <Col lg={2}> <LeftNavBar/> </Col>
+            <Col lg={10}>
+                <Navbar expand="lg" variant="fan" bg="fan" fluid>
+                    <Container>
+                        <Nav className="me-auto">
+                            <Nav.Link onClick={clickHandler} >Fan</Nav.Link>
+                            <Nav.Link  onClick={clickHandler} style={{marginLeft:'20%'}} >Light</Nav.Link>
+                            <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Camera</Nav.Link>
+                            <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Water Meter</Nav.Link>
+                            <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Electricity Meter</Nav.Link>
+                            <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Weather Sensor</Nav.Link>
+                        </Nav>
+                    </Container>
+                </Navbar>
 
-        <h2 style={{textAlign:"center", marginTop:"5%"}}> {device} Data</h2>
-        <Container style={{marginTop:"5%"}}>
+                <h2 style={{textAlign:"center", marginTop:"5%"}}> {device} Data</h2>
+                <Container style={{marginTop:"5%"}}>
 
-            <Table bordered>
-                <thead>
-                <tr>
-                    <th>Device Id</th>
-                    <th>Device Name</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
+                    <Table bordered>
+                        <thead>
+                        <tr>
+                            <th>Device Id</th>
+                            <th>Device Name</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
-                {data.map(d=>
-                     <ControlConfigureRow data={d} key={d.data.id} updateData={onUpdateDataHandler}/>
+                        {data.map(d=>
+                            <ControlConfigureRow data={d} key={d.data.id} updateData={onUpdateDataHandler}/>
 
-                )}
+                        )}
 
-                </tbody>
-            </Table>
-        </Container>
+                        </tbody>
+                    </Table>
+                </Container>
+            </Col>
+        </Row>
+
 
         </>
 

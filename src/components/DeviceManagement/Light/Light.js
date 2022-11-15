@@ -31,7 +31,7 @@ const Light=()=>{
             const lightData = await axios.post('http://localhost:4000/allDevices',{
                 type:'light',
                 data:{
-                    id:1
+                    userId:1
                 }
             });
             console.log(lightData.data.data);
@@ -57,7 +57,7 @@ const deleteDevice = async(deviceData)=>{
     })
 
     const newData = data.filter(d=>{
-        if(d.d!=deviceData.id)
+        if(d.id!=deviceData.id)
             return d;
     });
 
@@ -69,14 +69,15 @@ const deleteDevice = async(deviceData)=>{
 const onAddClickHandler = async (event)=>{
     event.preventDefault();
     const userId = sessionStorage.getItem("userId");
-    console.log(userId);
+
+    // todo change userId later
     let d = event.target;
     const data =
         {
             "type": "light",
             "data": {
                 "device_name":d.deviceName.value,
-                "userId":userId,
+                "userId":1,
                 "model" : d.model.value,
                 "installation_date":d.installationDate.value,
                 "id":d.deviceId.value,
@@ -100,7 +101,7 @@ const onAddClickHandler = async (event)=>{
     const lightData = await axios.post('http://localhost:4000/allDevices',{
         type:'light',
         data:{
-            id:userId
+            userId:1
         }
     });
     setData([...lightData.data.data]);
@@ -120,10 +121,11 @@ const update = async()=>{
     const call = async ()=>{
         const id = sessionStorage.getItem("userId");
         //console.log(id);
+        // todo change userId later
         const lightData = await axios.post('http://localhost:4000/allDevices',{
             type:'light',
             data:{
-               id:id
+               userId:1
             }
         });
         console.log(lightData.data.data);
