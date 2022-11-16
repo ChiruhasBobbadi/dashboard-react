@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.row{
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.card {
+    /*max-width: 20%;*/
+    border: 1px solid black;
+    padding: 3rem;
+    margin: 1em;
+    flex: 0 0 33.333%;
+
+}
+.card > img {
+    margin-bottom: .75rem;
+    width: 30%;
+}
+.card-text {
+    font-size: 85%;
+}
