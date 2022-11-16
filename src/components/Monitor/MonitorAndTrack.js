@@ -176,7 +176,7 @@ const MonitorAndTrack = ()=> {
                  <Col lg={10}>
                      <MonitorAndTrackNavBar/>
 
-                 <Container style={{marginTop:"%"}}>
+                 <Container style={{marginTop:"2%"}}>
                      <h2 style={{textAlign:"center"}}>Monitor and Tracking</h2>
                      <h3 style={{textAlign:"center"}}>{device} Devices</h3>
                      <div className="container">

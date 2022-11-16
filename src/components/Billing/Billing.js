@@ -9,6 +9,7 @@ import Col from "react-bootstrap/Col";
  import LeftNavBar from "../LeftNavBar/LeftNavBar";
 import Home from "../home";
 import axios from "axios";
+// import InvoiceDownloader from "./DownloadInvoice/download"
 
 
 
@@ -50,7 +51,7 @@ const Billing=()=> {
     <NavBarLoggedIn/>
     <Row>
         <Col lg={2}> <LeftNavBar/> </Col>
-        <Col lg={10}>
+        <Col lg={5}>
             <main>
                 <h1 className="main--title">Pending Bills</h1>
                 <div className="main--facts" >

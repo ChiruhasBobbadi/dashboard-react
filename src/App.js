@@ -25,6 +25,9 @@ function App() {
   return (
       <>
 
+
+
+
                           <Router>
                               <Routes>
 
@@ -40,8 +43,6 @@ function App() {
                                   <Route path='/deviceManagement/weather' element={<DeviceManagement/>}></Route>
 
                                   <Route path='/controlConfigure' element={<ControlConfigure/>}></Route>
-
-                                  <Route path='/monitorandtrack' element={<MonitorAndTrack/>}></Route>
 
 
                                     <Route path='/monitor'></Route>

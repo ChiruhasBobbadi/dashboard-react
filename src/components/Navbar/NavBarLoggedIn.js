@@ -20,9 +20,9 @@ const Navbar2 =(props)=>{
 
 
     return <>
-        <Navbar bg="dark" variant="dark">
+        <Navbar fixedTop style={{color:"white",marginTop:'2%' , marginLeft:'1%', marginRight:'1%', backgroundColor: "#8463F6" , backgroundSize:"0" }} >
             <Container>
-                <Navbar.Brand href="/home" style={{fontSize:'30px'}}>
+                <Navbar.Brand className="justify-content-left" href="/home" style={{fontSize:'30px'}}>
                     <img
                         alt=""
                         src={logo}
@@ -31,23 +31,26 @@ const Navbar2 =(props)=>{
                         className="d-inline-block align-top"
                     />
                     {" "}
-                    Green Energy Cloud
+                    Smart Meter System
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Container>
-            <Navbar.Collapse  className="justify-content-end">
+                <Navbar.Collapse  className="justify-content-end">
 
-                    <Navbar.Text style={{color:"white",marginLeft:'5%'}}>
-                        Hello, {sessionStorage.getItem("userName")}! <BiUserCircle style={{fontSize:'35px'} }/>
+                    <Navbar.Brand href="/profile" style={{color:"white",marginLeft:'5%'}}>
+                         {sessionStorage.getItem("userName")} <BiUserCircle style={{fontSize:'35px'} }/>
 
-                    </Navbar.Text>
-                    <Navbar.Text onClick={logout}  className="justify-content-end" style={{color:"white",marginLeft:'10%'}}>
-                        Logout  <FiLogOut style={{fontSize:'30px'} }/>
+                    </Navbar.Brand>
 
-                    </Navbar.Text>
+                    <Navbar.Brand href="/" onClick={logout}  className="justify-content-end" style={{color:"white",marginLeft:'0%'}}>
+                          <FiLogOut style={{fontSize:'30px'} }/>
+
+                    </Navbar.Brand>
 
 
-            </Navbar.Collapse>
+                </Navbar.Collapse>
+
+
         </Navbar>
     </>
 

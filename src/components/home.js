@@ -54,7 +54,8 @@ const Home = ()=>{
             <Row style={{marginTop:'5%'}}>
 
                 <Col lg={4} >
-                    <Card style={{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}>
+                {/* style={{color:"white",marginTop:'2%' , marginLeft:'1%', marginRight:'1%', backgroundColor: "#8463F6" , backgroundSize:"0" } */}
+                    <Card style={{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', color:"white",  backgroundColor: "#8463F6" , backgroundSize:"0"}}>
                         <Card.Body>
                             <Card.Title>Total Usage</Card.Title>
 
@@ -67,7 +68,7 @@ const Home = ()=>{
 
                 </Col>
                 <Col lg={4} >
-                    <Card style={{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}>
+                    <Card style={{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' , color:"white",  backgroundColor: "#8463F6" , backgroundSize:"0"}}>
                         <Card.Body>
                             <Card.Title>Last 24 hour Usage</Card.Title>
 
@@ -81,7 +82,7 @@ const Home = ()=>{
                 </Col>
 
                 <Col lg={4} >
-                    <Card style={{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}>
+                    <Card style={{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' , color:"white",  backgroundColor: "#8463F6" , backgroundSize:"0" }}>
                         <Card.Body>
                             <Card.Title>Last Updated</Card.Title>
 
@@ -120,7 +121,7 @@ const Home = ()=>{
         <Row style={{marginTop:'5%'}}>
 
             <Col lg={4} >
-                <Card style={{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}>
+                <Card style={{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' , color:"white",  backgroundColor: "#8463F6" , backgroundSize:"0"}}>
                     <Card.Body>
                         <Card.Title>Total Usage</Card.Title>
 
@@ -133,7 +134,7 @@ const Home = ()=>{
 
             </Col>
             <Col lg={4} >
-                <Card style={{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}>
+                <Card style={{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' , color:"white",  backgroundColor: "#8463F6" , backgroundSize:"0"}}>
                     <Card.Body>
                         <Card.Title>Last 24 hour Usage</Card.Title>
 
@@ -147,7 +148,7 @@ const Home = ()=>{
             </Col>
 
             <Col lg={4} >
-                <Card style={{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}>
+                <Card style={{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' , color:"white",  backgroundColor: "#8463F6" , backgroundSize:"0" }}>
                     <Card.Body>
                         <Card.Title>Last Updated</Card.Title>
 

@@ -148,7 +148,7 @@ const Fan=()=>{
         </Row>
         <br/>
 
-        <Table bordered>
+        <Table bordered style={{ border: 100, bordercolor: "red" }}>
             <thead>
             <tr>
                 <th>Device Id</th>
