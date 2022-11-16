@@ -34,8 +34,6 @@ const ControlConfigureRow = (props)=>{
                 onChange={switchStateHandler}
             />
 
-
-
         </td>
     </tr>
 

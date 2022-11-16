@@ -73,7 +73,7 @@ const FanRow = (props)=>{
 
             <td>{props.data.id.split("-")[0]}</td>
             <td>{props.data.name}</td>
-            <td> <Row style={{ border: 3, bordercolor: "red" }}>
+            <td> <Row>
                 <Col lg={2}>
                     <Button onClick={handleShow}> View </Button>
                 </Col>

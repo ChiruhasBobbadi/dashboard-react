@@ -20,7 +20,7 @@ const Navbar2 =(props)=>{
 
 
     return <>
-        <Navbar fixedTop style={{color:"white",marginTop:'2%' , marginLeft:'1%', marginRight:'1%', backgroundColor: "#8463F6" , backgroundSize:"0" }} >
+        <Navbar fixedTop style={{color:"white",marginTop:'2%' , marginLeft:'1%', marginRight:'1%', backgroundColor: "#7ce0ae" , backgroundSize:"0" }} >
             <Container>
                 <Navbar.Brand className="justify-content-left" href="/home" style={{fontSize:'30px'}}>
                     <img

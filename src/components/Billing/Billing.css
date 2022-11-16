@@ -12,7 +12,7 @@
     background-color: #7ce0ae;
     padding: 50px;
 
-    box-shadow: 5px 10px #738b74;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .main--facts > li {
@@ -24,5 +24,5 @@
     margin: 20px;
     align-items: center;
     background-color: #9ed7af;
-    box-shadow: 2px 4px #9eb6a3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }

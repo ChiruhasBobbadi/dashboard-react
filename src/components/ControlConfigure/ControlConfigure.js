@@ -165,12 +165,12 @@ const ControlConfigure = ()=> {
                 <Navbar expand="lg" variant="light" bg="light" fluid="true">
 
                     <Nav>
-                        <Nav.Link onClick={clickHandler} style={{marginLeft:"10%"}}>Fan </Nav.Link>
-                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}} >Light</Nav.Link>
+                        <Nav.Link onClick={clickHandler} style={{marginLeft:"10%"}}>fan </Nav.Link>
+                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}} >light</Nav.Link>
                         <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>camera</Nav.Link>
-                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Water_Meter</Nav.Link>
-                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Electricity_Meter</Nav.Link>
-                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Weather_Sensor</Nav.Link>
+                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>water_meter</Nav.Link>
+                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>electricity_meter</Nav.Link>
+                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>weather_sensor</Nav.Link>
                     </Nav>
 
                 </Navbar>
