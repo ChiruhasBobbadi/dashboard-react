@@ -31,7 +31,7 @@ const Navbar2 =(props)=>{
                         className="d-inline-block align-top"
                     />
                     {" "}
-                    Green Energy Cloud
+                    Smart Meter Dashboard
                 </Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse  className="justify-content-end">

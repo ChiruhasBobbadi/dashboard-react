@@ -18,7 +18,7 @@ const NavBar =()=> {
                     className="d-inline-block align-top"
                 />
                 {" "}
-                Green Energy Cloud
+                Smart Meter Dashboard
             </Navbar.Brand>
         </Container>
     </Navbar>

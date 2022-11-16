@@ -167,7 +167,7 @@ const ControlConfigure = ()=> {
                     <Nav>
                         <Nav.Link onClick={clickHandler} style={{marginLeft:"10%"}}>Fan </Nav.Link>
                         <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}} >Light</Nav.Link>
-                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>camera</Nav.Link>
+                        <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Camera</Nav.Link>
                         <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Water_Meter</Nav.Link>
                         <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Electricity_Meter</Nav.Link>
                         <Nav.Link onClick={clickHandler} style={{marginLeft:'20%'}}>Weather_Sensor</Nav.Link>
