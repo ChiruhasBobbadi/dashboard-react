@@ -75,7 +75,6 @@ const [message, setMessage] = useState(errorMessage);
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" name="email"/>
                     <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
                     </Form.Text>
                 </Form.Group>
 
@@ -83,10 +82,10 @@ const [message, setMessage] = useState(errorMessage);
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" name="password"/>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
+                {/*<Form.Group className="mb-3" controlId="formBasicCheckbox">*/}
+                {/*    <Form.Check type="checkbox" label="Check me out" />*/}
+                {/*</Form.Group>*/}
+                <Button variant="primary" type="submit" >
                     Submit
                 </Button>
             </Form>

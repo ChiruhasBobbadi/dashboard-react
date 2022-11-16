@@ -8,7 +8,7 @@ const NavBar =()=> {
     return (
 <>
     <Navbar bg="dark" variant="dark">
-        <Container>
+        {/*<Container>*/}
             <Navbar.Brand href="" style={{fontSize:'35px'}}>
                 <img
                     alt=""
@@ -20,7 +20,7 @@ const NavBar =()=> {
                 {" "}
                 Smart Meter System
             </Navbar.Brand>
-        </Container>
+        {/*</Container>/*/}
     </Navbar>
 </>
 
