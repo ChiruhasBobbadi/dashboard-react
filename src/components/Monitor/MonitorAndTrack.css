@@ -17,9 +17,10 @@ body {
 .card {
     /*max-width: 20%;*/
     border: 1px solid black;
-    padding: 0.75rem;
+    padding: 3rem;
     margin: 1em;
     flex: 0 0 33.333%;
+
 }
 .card > img {
     margin-bottom: .75rem;

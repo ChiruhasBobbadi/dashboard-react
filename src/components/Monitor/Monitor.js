@@ -125,14 +125,14 @@ const Monitor = ()=> {
             console.log(d);
             return <div className="card">
                 <FaFan style={{fontSize:'60px', verticalAlign:"middle"}} />
-                <p className="card-text">deviceID: {d.data.id} </p>
-                <p className="card-text">deviceName: {d.data.name}</p>
-                <p className="card-text" style={{color:"lightgreen"}}>deviceStatus: {d.data.status ?"Running":"Failing"}</p>
-                <p className="card-text">devicePower: {d.data.power} Watts</p>
-                <p className="card-text">Voltage: {Math.floor(Math.random() * (15 - 5) + 5)} V</p>
-                <p className="card-text">Current: {Math.floor(Math.random() * (10 - 3) + 3)} A</p>
-                <p className="card-text">Fan Speed: {Math.floor(Math.random() * (40 - 20) + 20)} </p>
-                <p className="card-text">Speed Number: {Math.floor(Math.random() * (5 - 1) + 1)} </p>
+                <p className="card-text"><b>Device Id</b> :{d.data.id} </p>
+                <p className="card-text"><b>deviceName:</b> {d.data.name}</p>
+                <p className="card-text" style={{color:"lightgreen"}}><b>deviceStatus:</b> {d.data.status ?"Running":"Failing"}</p>
+                <p className="card-text"><b>devicePower:</b> {d.data.power} Watts</p>
+                <p className="card-text"><b>Voltage:</b> {Math.floor(Math.random() * (15 - 5) + 5)} V</p>
+                <p className="card-text"><b>Current:</b> {Math.floor(Math.random() * (10 - 3) + 3)} A</p>
+                <p className="card-text"><b>Fan Speed: </b>: {Math.floor(Math.random() * (40 - 20) + 20)} </p>
+                <p className="card-text"><b>Speed Number: </b>{Math.floor(Math.random() * (5 - 1) + 1)} </p>
 
             </div>
         })
@@ -141,15 +141,15 @@ const Monitor = ()=> {
 
             return <div className="card">
                 <FaLightbulb style={{fontSize:'60px', verticalAlign:"middle"}} />
-                <p className="card-text">deviceID: {d.data.id} </p>
-                <p className="card-text">deviceName: {d.data.name}</p>
-                <p className="card-text" style={{color: d.data.status?"lightgreen":"red"}}>deviceStatus: {d.data.status ?"Running":"Failing"}</p>
-                <p className="card-text">devicePower: {d.data.power} Watts</p>
-                <p className="card-text">Luminous Efficacy: {Math.floor(Math.random() * (70 - 40) + 40)} %</p>
-                <p className="card-text">Luminous Flux: {Math.floor(Math.random() * (8 - 4) + 4)} </p>
-                <p className="card-text">Luminous Intensity: {Math.floor(Math.random() * (40 - 20) + 20)} CD</p>
-                <p className="card-text">Voltage: {Math.floor(Math.random() * (15 - 5) + 5)} V</p>
-                <p className="card-text">Current: {Math.floor(Math.random() * (10 - 3) + 3)} A</p>
+                <p className="card-text"><b>deviceID: </b>{d.data.id} </p>
+                <p className="card-text"><b>deviceName:</b> {d.data.name}</p>
+                <p className="card-text" style={{color: d.data.status?"lightgreen":"red"}}> <b>deviceStatus:</b> {d.data.status ?"Running":"Failing"}</p>
+                <p className="card-text"><b>devicePower:</b> {d.data.power} Watts</p>
+                <p className="card-text"><b>Luminous Efficacy:</b> {Math.floor(Math.random() * (70 - 40) + 40)} %</p>
+                <p className="card-text"><b>Luminous Flux:</b> {Math.floor(Math.random() * (8 - 4) + 4)} </p>
+                <p className="card-text"><b>Luminous Intensity:</b> {Math.floor(Math.random() * (40 - 20) + 20)} CD</p>
+                <p className="card-text"><b>Voltage:</b> {Math.floor(Math.random() * (15 - 5) + 5)} V</p>
+                <p className="card-text"><b>Current:</b> {Math.floor(Math.random() * (10 - 3) + 3)} A</p>
             </div>
         })
     }else if(device==='weather_sensor'){
@@ -157,17 +157,17 @@ const Monitor = ()=> {
 
             return <div className="card">
                 <TbTemperature style={{fontSize:'60px', verticalAlign:"middle"}} />
-                <p className="card-text">deviceID: {d.data.id} </p>
-                <p className="card-text">deviceName: {d.data.name}</p>
-                <p className="card-text" style={{color: d.data.status?"lightgreen":"red"}}>deviceStatus: {d.data.status ?"Running":"Failing"}</p>
-                <p className="card-text">devicePower: {d.data.power} Watts</p>
-                <p className="card-text">Temperature: {Math.floor(Math.random() * (100 - 30) + 30)} F</p>
-                <p className="card-text">Relative Humidity: {Math.floor(Math.random() * (90 - 30) + 30)} %</p>
-                <p className="card-text">Wind Speed: {Math.floor(Math.random() * (150 - 100) + 100)} mph</p>
-                <p className="card-text">Air Pressure: {Math.floor(Math.random() * (150 - 100) + 100)} KPA</p>
-                <p className="card-text">Precipitation : {Math.floor(Math.random() * (0.5 - 0.3) + 0.3)} mm</p>
-                <p className="card-text">Voltage: {Math.floor(Math.random() * (15 - 5) + 5)} V</p>
-                <p className="card-text">Current: {Math.floor(Math.random() * (10 - 3) + 3)} A</p>
+                <p className="card-text"><b>deviceID:</b> {d.data.id} </p>
+                <p className="card-text"><b>deviceName:</b> {d.data.name}</p>
+                <p className="card-text" style={{color: d.data.status?"lightgreen":"red"}}><b>deviceStatus:</b> {d.data.status ?"Running":"Failing"}</p>
+                <p className="card-text"><b>devicePower:</b> {d.data.power} Watts</p>
+                <p className="card-text"><b>Temperature</b>: {Math.floor(Math.random() * (100 - 30) + 30)} F</p>
+                <p className="card-text"><b>Relative Humidity</b>: {Math.floor(Math.random() * (90 - 30) + 30)} %</p>
+                <p className="card-text"><b>Wind Speed:</b> {Math.floor(Math.random() * (150 - 100) + 100)} mph</p>
+                <p className="card-text"><b>Air Pressure</b>: {Math.floor(Math.random() * (150 - 100) + 100)} KPA</p>
+                <p className="card-text"><b>Precipitation</b> : {Math.floor(Math.random() * (0.5 - 0.3) + 0.3)} mm</p>
+                <p className="card-text"><b>Voltage:</b> {Math.floor(Math.random() * (15 - 5) + 5)} V</p>
+                <p className="card-text"><b>Current:</b> {Math.floor(Math.random() * (10 - 3) + 3)} A</p>
             </div>
         })
     }else if(device==='camera'){
@@ -175,24 +175,24 @@ const Monitor = ()=> {
 
             return <div className="card">
                 <FaCamera style={{fontSize:'60px', verticalAlign:"middle"}} />
-                <p className="card-text">deviceID: {d.data.id} </p>
-                <p className="card-text">deviceName: {d.data.name}</p>
-                <p className="card-text" style={{color: d.data.status?"lightgreen":"red"}}>deviceStatus: {d.data.status ?"Running":"Failing"}</p>
-                <p className="card-text">devicePower: {d.data.power} Watts</p>
-                <p className="card-text">Voltage: {Math.floor(Math.random() * (15 - 5) + 5)} V</p>
-                <p className="card-text">Current: {Math.floor(Math.random() * (10 - 3) + 3)} A</p>
+                <p className="card-text"><b>deviceID:</b> {d.data.id} </p>
+                <p className="card-text"><b>deviceName:</b> {d.data.name}</p>
+                <p className="card-text" style={{color: d.data.status?"lightgreen":"red"}}><b>deviceStatus:</b> {d.data.status ?"Running":"Failing"}</p>
+                <p className="card-text"><b>devicePower:</b> {d.data.power} Watts</p>
+                <p className="card-text"><b>Voltage:</b> {Math.floor(Math.random() * (15 - 5) + 5)} V</p>
+                <p className="card-text"><b>Current:</b> {Math.floor(Math.random() * (10 - 3) + 3)} A</p>
             </div>
         })
     }else {
         el =  data.map(d=>{
 
             return <div className="card">
-                <p className="card-text">deviceID: {d.data.id} </p>
-                <p className="card-text">deviceName: {d.data.name}</p>
-                <p className="card-text" style={{color: d.data.status?"lightgreen":"red"}}>deviceStatus: {d.data.status ?"Running":"Failing"}</p>
-                <p className="card-text">devicePower: {d.data.power} Watts</p>
-                <p className="card-text">Voltage: {Math.floor(Math.random() * (15 - 5) + 5)} V</p>
-                <p className="card-text">Current: {Math.floor(Math.random() * (10 - 3) + 3)} A</p>
+                <p className="card-text"><b>deviceID:</b> {d.data.id} </p>
+                <p className="card-text"><b>deviceName:</b> {d.data.name}</p>
+                <p className="card-text" style={{color: d.data.status?"lightgreen":"red"}}><b>deviceStatus:</b> {d.data.status ?"Running":"Failing"}</p>
+                <p className="card-text"><b>devicePower:</b> {d.data.power} Watts</p>
+                <p className="card-text"><b>Voltage:</b> {Math.floor(Math.random() * (15 - 5) + 5)} V</p>
+                <p className="card-text"><b>Current:</b> {Math.floor(Math.random() * (10 - 3) + 3)} A</p>
             </div>
         })
     }
