@@ -56,10 +56,10 @@ const Invoice=()=> {
                 <Row gutter={24} style={{ marginTop: 32 }}>
                     <Col span={8}>
                         <h4>{data.name}</h4>
-                        <div>756 The alameda,</div>
-                        <div>Downtown Street</div>
+                        <div>San Jose State University,</div>
+                        <div>1 washington square</div>
                         <div>San Jose,</div>
-                        <div>California - 95126</div>
+                        <div>California - 95112</div>
                     </Col>
                     <Col span={8} offset={8}>
                         <table>
