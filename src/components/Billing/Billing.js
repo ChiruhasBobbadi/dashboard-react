@@ -27,13 +27,13 @@ const Billing=()=> {
     };
 
     React.useEffect( () => {
-    //todo change USERID
+
         const call = async ()=>{
             const id = sessionStorage.getItem("userId");
             console.log(id);
             const bill = await axios.post('http://localhost:4000/bill',{
                 data:{
-                    userId:1
+                    userId:id
                 }
             });
             console.log(bill);

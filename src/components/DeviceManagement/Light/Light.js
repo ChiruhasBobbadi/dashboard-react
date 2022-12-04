@@ -31,7 +31,7 @@ const Light=()=>{
             const lightData = await axios.post('http://localhost:4000/allDevices',{
                 type:'light',
                 data:{
-                    userId:1
+                    userId:id
                 }
             });
             console.log(lightData.data.data);
@@ -77,7 +77,7 @@ const onAddClickHandler = async (event)=>{
             "type": "light",
             "data": {
                 "device_name":d.deviceName.value,
-                "userId":1,
+                "userId":userId,
                 "model" : d.model.value,
                 "installation_date":d.installationDate.value,
                 "id":d.deviceId.value,
@@ -101,7 +101,7 @@ const onAddClickHandler = async (event)=>{
     const lightData = await axios.post('http://localhost:4000/allDevices',{
         type:'light',
         data:{
-            userId:1
+            userId:userId
         }
     });
     setData([...lightData.data.data]);
@@ -125,7 +125,7 @@ const update = async()=>{
         const lightData = await axios.post('http://localhost:4000/allDevices',{
             type:'light',
             data:{
-               userId:1
+               userId:id
             }
         });
         console.log(lightData.data.data);
@@ -173,7 +173,7 @@ const update = async()=>{
 
        <Modal  show={showAddModal} onHide={handleCloseAddModal}  size="xl">
            <Form onSubmit={onAddClickHandler}>
-               <Modal.Header closeButton>
+               <Modal.Header >
                    <Modal.Title>View Light Information</Modal.Title>
                </Modal.Header>
                <Modal.Body>

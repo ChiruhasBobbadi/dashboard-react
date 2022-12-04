@@ -37,7 +37,7 @@ const Monitor = ()=> {
             const fanData = await axios.post('http://localhost:4000/getAllDevices',{
                 type:device,
                 data:{
-                    id:1
+                    id:id
                 }
             });
 
@@ -64,7 +64,7 @@ const Monitor = ()=> {
         const deviceData = await axios.post('http://localhost:4000/getAllDevices',{
             type:type,
             data:{
-                id:1
+                id:id
             }
         });
 
@@ -104,7 +104,7 @@ const Monitor = ()=> {
                 type='water_meter'
                 break;
             case 'Electricity':
-                type='electricity_meter'
+                type='electric_meter'
                 break;
             case 'Weather_Sensor':
                 type='weather_sensor'

@@ -41,7 +41,7 @@ const WaterMeterRow = (props)=>{
                 "type": "water_meter",
                 "data": {
                     "device_name":d.deviceName.value,
-                    "userId":1,
+                    "userId":userId,
                     "model" : d.model.value,
                     "installation_date":d.installationDate.value,
                     "id":d.deviceId.value,
@@ -89,7 +89,7 @@ const WaterMeterRow = (props)=>{
 
         {/*view modal*/}
         <Modal show={show} onHide={handleClose}  size="xl">
-            <Modal.Header closeButton>
+            <Modal.Header >
                 <Modal.Title>View waterMeter Information</Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -164,7 +164,7 @@ const WaterMeterRow = (props)=>{
 
         <Modal  show={showUpdateModal} onHide={handleCloseUpdateModal}  size="xl">
             <Form onSubmit={onUpdateClickHandler}>
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title>View waterMeter Information</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -279,6 +279,7 @@ const WaterMeterRow = (props)=>{
                             type="text"
                             id="metric"
                             required={true}
+                            defaultValue={props.data.metric}
                         />
 
                         </Col>

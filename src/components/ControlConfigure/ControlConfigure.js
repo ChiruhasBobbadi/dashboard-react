@@ -1,5 +1,5 @@
 import Container from "react-bootstrap/Container";
-import {Nav, Navbar, Table} from "react-bootstrap";
+import {Modal, Nav, Navbar, Spinner, Table} from "react-bootstrap";
 import React, {useState} from "react";
 import axios from "axios";
 import ControlConfigureRow from "./ControlConfigureRow";
@@ -14,7 +14,10 @@ import Home from "../home";
 
 const ControlConfigure = ()=> {
 
+    const [show, setShow] = useState(false);
 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const val=[];
 
@@ -30,7 +33,7 @@ const ControlConfigure = ()=> {
             const fanData = await axios.post('http://localhost:4000/getAllDevices',{
                 type:device,
                 data:{
-                    id:1
+                    id:id
                 }
             });
 
@@ -57,7 +60,7 @@ const ControlConfigure = ()=> {
         const deviceData = await axios.post('http://localhost:4000/getAllDevices',{
             type:type,
             data:{
-                id:1
+                id:id
             }
         });
 
@@ -94,7 +97,7 @@ const ControlConfigure = ()=> {
                 type='water_meter'
                 break;
             case 'Electricity_Meter':
-                type='electricity_meter'
+                type='electric_meter'
                 break;
             case 'Weather_Sensor':
                 type='weather_sensor'
@@ -108,6 +111,8 @@ const ControlConfigure = ()=> {
     const onUpdateDataHandler= async(d)=>{
 
         const newChecked = !d.data.status;
+
+        handleShow();
 
         console.log("changing state to " + newChecked + " " + d.data.id);
 
@@ -129,7 +134,7 @@ const ControlConfigure = ()=> {
         const newData = await axios.post('http://localhost:4000/getAllDevices',{
             type:type,
             data:{
-                id:1
+                id:id
             }
         });
 
@@ -145,7 +150,7 @@ const ControlConfigure = ()=> {
         })
 
 
-
+        handleClose();
 
         setData([...t]);
 
@@ -199,6 +204,22 @@ const ControlConfigure = ()=> {
 
             </Col>
         </Row>
+
+        <Modal show={show} onHide={handleClose}>
+            <Modal.Header>
+                <Modal.Title>Processing Request</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <Spinner animation="border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner></Modal.Body>
+            <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                    Close
+                </Button>
+
+            </Modal.Footer>
+        </Modal>
 
 
         </>
