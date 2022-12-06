@@ -14,6 +14,7 @@ const LeftMenu = ()=> {
                         <Nav.Link href="/deviceManagement" style={{color:'#fff',fontSize:'20px',marginTop:'10%'}}><AiOutlineAppstoreAdd style={{fontSize:'20px'}}/> Device Management</Nav.Link>
                         <Nav.Link href='/monitor' style={{color:'#fff',fontSize:'20px',marginTop:'10%'}}> <GoGraph style={{fontSize:'20px'}}/> Monitor & tracking</Nav.Link>
                         <Nav.Link href='/controlConfigure' style={{color:'#fff',fontSize:'20px',marginTop:'10%'}}> <AiFillSetting style={{fontSize:'20px'}}/> Control & Configure</Nav.Link>
+                        <Nav.Link href='/service' style={{color:'#fff',fontSize:'20px',marginTop:'10%'}}> <AiFillSetting style={{fontSize:'20px'}}/>Service Request</Nav.Link>
                         <Nav.Link href='/billing' style={{color:'#fff',fontSize:'20px',marginTop:'10%'}}><RiBillLine style={{fontSize:'20px'}}/> Billing</Nav.Link>
                       
                 </Nav>

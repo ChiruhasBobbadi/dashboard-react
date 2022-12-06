@@ -89,7 +89,7 @@ const WeatherSensorRow = (props)=>{
 
         {/*view modal*/}
         <Modal show={show} onHide={handleClose}  size="xl">
-            <Modal.Header closeButton>
+            <Modal.Header >
                 <Modal.Title>View weatherSensor Information</Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -163,7 +163,7 @@ const WeatherSensorRow = (props)=>{
 
         <Modal  show={showUpdateModal} onHide={handleCloseUpdateModal}  size="xl">
             <Form onSubmit={onUpdateClickHandler}>
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title>View weatherSensor Information</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>

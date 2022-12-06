@@ -41,7 +41,7 @@ const LightRow = (props)=>{
                 "type": "light",
             "data": {
             "device_name":d.deviceName.value,
-            "userId":1,
+            "userId":userId,
             "model" : d.model.value,
             "installation_date":d.installationDate.value,
                 "id":d.deviceId.value,
@@ -89,7 +89,7 @@ const LightRow = (props)=>{
 
         {/*view modal*/}
         <Modal show={show} onHide={handleClose}  size="xl">
-            <Modal.Header closeButton>
+            <Modal.Header >
                 <Modal.Title>View light Information</Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -163,7 +163,7 @@ const LightRow = (props)=>{
 
         <Modal  show={showUpdateModal} onHide={handleCloseUpdateModal}  size="xl">
             <Form onSubmit={onUpdateClickHandler}>
-            <Modal.Header closeButton>
+            <Modal.Header >
                 <Modal.Title>View light Information</Modal.Title>
             </Modal.Header>
             <Modal.Body>

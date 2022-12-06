@@ -29,9 +29,9 @@ const ElectricityMeter=()=>{
             const id = sessionStorage.getItem("userId");
             console.log(id);
             const ElectricityMeterData = await axios.post('http://localhost:4000/allDevices',{
-                type:'electricityMeter',
+                type:'electric_meter',
                 data:{
-                    userId:1
+                    userId:id
                 }
             });
             console.log(ElectricityMeterData.data.data);
@@ -50,9 +50,9 @@ const ElectricityMeter=()=>{
 
 
         await axios.post('http://localhost:4000/deleteDevice',{
-            type:'electricityMeter',
+            type:'electric_meter',
             data:{
-                id:deviceData.id
+                userId:deviceData.id
             }
         })
 
@@ -69,11 +69,11 @@ const ElectricityMeter=()=>{
     const onAddClickHandler = async (event)=>{
         event.preventDefault();
         const userId = sessionStorage.getItem("userId");
-
+        console.log(userId);
         let d = event.target;
         const data =
             {
-                "type": "electricityMeter",
+                "type": "electric_meter",
                 "data": {
                     "device_name":d.deviceName.value,
                     "userId":userId,
@@ -97,9 +97,9 @@ const ElectricityMeter=()=>{
 
         await axios.post('http://localhost:4000/addDevice',data)
         const ElectricityMeterData = await axios.post('http://localhost:4000/allDevices',{
-            type:'electricityMeter',
+            type:'electric_meter',
             data:{
-                id:userId
+                userId:userId
             }
         });
         setData([...ElectricityMeterData.data.data]);
@@ -119,7 +119,7 @@ const ElectricityMeter=()=>{
             const id = sessionStorage.getItem("userId");
             //console.log(id);
             const ElectricityMeterData = await axios.post('http://localhost:4000/allDevices',{
-                type:'electricityMeter',
+                type:'electric_meter',
                 data:{
                     userId:id
                 }
@@ -169,7 +169,7 @@ const ElectricityMeter=()=>{
 
         <Modal  show={showAddModal} onHide={handleCloseAddModal}  size="xl">
             <Form onSubmit={onAddClickHandler}>
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title>View ElectricityMeter Information</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -288,7 +288,7 @@ const ElectricityMeter=()=>{
                     <Button variant="secondary" onClick={handleCloseAddModal}>
                         Close
                     </Button>
-                    <Button variant="success" type={"submit"}>
+                    <Button variant="success" type={"submit"} >
                         Add
                     </Button>
                 </Modal.Footer>

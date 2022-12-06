@@ -33,7 +33,7 @@ The backend project is on [this](https://github.com/ChiruhasBobbadi/dashboard_se
 
 ## 3. Device Management
 
-![](readme_files/device management.gif)
+![](readme_files/device_management.gif)
 
 ## 4. Control & Configure
 
