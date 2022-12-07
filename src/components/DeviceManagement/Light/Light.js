@@ -28,7 +28,7 @@ const Light=()=>{
         const call = async ()=>{
             const id = sessionStorage.getItem("userId");
             //console.log(id);
-            const lightData = await axios.post('http://localhost:4000/allDevices',{
+            const lightData = await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/allDevices',{
                 type:'light',
                 data:{
                     userId:id
@@ -49,7 +49,7 @@ const deleteDevice = async(deviceData)=>{
     // deleting
 
 
-    await axios.post('http://localhost:4000/deleteDevice',{
+    await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/deleteDevice',{
         type:'light',
         data:{
             id:deviceData.id
@@ -96,9 +96,9 @@ const onAddClickHandler = async (event)=>{
 
 
 
-    await axios.post('http://localhost:4000/addDevice',data)
+    await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/addDevice',data)
 
-    const lightData = await axios.post('http://localhost:4000/allDevices',{
+    const lightData = await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/allDevices',{
         type:'light',
         data:{
             userId:userId
@@ -122,7 +122,7 @@ const update = async()=>{
         const id = sessionStorage.getItem("userId");
         //console.log(id);
         // todo change userId later
-        const lightData = await axios.post('http://localhost:4000/allDevices',{
+        const lightData = await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/allDevices',{
             type:'light',
             data:{
                userId:id

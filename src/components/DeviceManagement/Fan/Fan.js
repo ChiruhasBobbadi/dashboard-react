@@ -28,7 +28,7 @@ const Fan=()=>{
         const call = async ()=>{
             const id = sessionStorage.getItem("userId");
             console.log(id);
-            const fanData = await axios.post('http://localhost:4000/allDevices',{
+            const fanData = await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/allDevices',{
                 type:'fan',
                 data:{
                     id:id
@@ -49,7 +49,7 @@ const Fan=()=>{
         // deleting
 
 
-        await axios.post('http://localhost:4000/deleteDevice',{
+        await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/deleteDevice',{
             type:'fan',
             data:{
                 id:deviceData.id
@@ -97,8 +97,8 @@ const Fan=()=>{
 
 
 
-        await axios.post('http://localhost:4000/addDevice',data)
-        const fanData = await axios.post('http://localhost:4000/allDevices',{
+        await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/addDevice',data)
+        const fanData = await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/allDevices',{
             type:'fan',
             data:{
                 id:userId
@@ -120,7 +120,7 @@ const Fan=()=>{
         const call = async ()=>{
             const id = sessionStorage.getItem("userId");
             //console.log(id);
-            const fanData = await axios.post('http://localhost:4000/allDevices',{
+            const fanData = await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/allDevices',{
                 type:'fan',
                 data:{
                     id:id

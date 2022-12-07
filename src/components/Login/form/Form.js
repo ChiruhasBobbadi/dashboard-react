@@ -32,7 +32,7 @@ const [message, setMessage] = useState(errorMessage);
     }
 
     const authenticate = async(email, pass)=>{
-       const response = await axios.post("http://localhost:4000/login",{
+       const response = await axios.post("http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/login",{
             email:email,
             password:pass
         });

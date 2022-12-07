@@ -21,7 +21,7 @@ function  ManageUsers(){
 
         // make api call to delete
         const userId = event.target.name
-        await axios.post('http://localhost:4000/deleterUser',{
+        await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/deleterUser',{
             userId:userId
         });
 
@@ -39,7 +39,7 @@ function  ManageUsers(){
         const call = async ()=>{
 
 
-            let userData = await axios.get('http://localhost:4000/getAllUsers');
+            let userData = await axios.get('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/getAllUsers');
             console.log(userData);
 
             userData = userData.data.data;

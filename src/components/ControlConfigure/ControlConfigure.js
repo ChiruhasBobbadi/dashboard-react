@@ -30,7 +30,7 @@ const ControlConfigure = ()=> {
         const call = async ()=>{
             const id = sessionStorage.getItem("userId");
 
-            const fanData = await axios.post('http://localhost:4000/getAllDevices',{
+            const fanData = await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/getAllDevices',{
                 type:device,
                 data:{
                     id:id
@@ -57,7 +57,7 @@ const ControlConfigure = ()=> {
     const call = async (type)=>{
         const id = sessionStorage.getItem("userId");
 
-        const deviceData = await axios.post('http://localhost:4000/getAllDevices',{
+        const deviceData = await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/getAllDevices',{
             type:type,
             data:{
                 id:id
@@ -119,11 +119,11 @@ const ControlConfigure = ()=> {
 
         console.log(d);
         if(newChecked)
-            await axios.post('http://localhost:4000/startDevice',{
+            await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/startDevice',{
                 ...d
             })
         else{
-            await axios.post('http://localhost:4000/stopDevice',{
+            await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/stopDevice',{
                 ...d
             })
         }
@@ -131,7 +131,7 @@ const ControlConfigure = ()=> {
         const type= d.type;
         const id = sessionStorage.getItem("userId");
 
-        const newData = await axios.post('http://localhost:4000/getAllDevices',{
+        const newData = await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/getAllDevices',{
             type:type,
             data:{
                 id:id

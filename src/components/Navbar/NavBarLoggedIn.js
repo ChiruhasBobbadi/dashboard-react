@@ -12,7 +12,7 @@ const Navbar2 =(props)=>{
     const navigate = useNavigate();
   async  function logout() {
 
-      await axios.post('http://localhost:4000/logout');
+      await axios.post('http://ec2-54-81-146-239.compute-1.amazonaws.com:4000/logout');
 
       navigate("/");
 
