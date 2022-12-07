@@ -34,7 +34,7 @@ function ServiceRequest() {
 
     }
     const submit = async(device, description)=>{
-        const response = await axios.post("http://localhost:4000/service",{
+        const response = await axios.post("http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/service",{
             device:device,
             userId:sessionStorage.getItem("userId"),
             description:description

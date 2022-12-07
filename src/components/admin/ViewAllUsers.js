@@ -21,7 +21,7 @@ function  ViewAllUsers(){
         const call = async ()=>{
             const id = sessionStorage.getItem("userId");
 
-            let userData = await axios.get('http://localhost:4000/getAllUsers');
+            let userData = await axios.get('http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/getAllUsers');
             console.log(userData);
 
             userData = userData.data.data;

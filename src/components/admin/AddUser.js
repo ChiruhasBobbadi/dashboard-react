@@ -41,7 +41,7 @@ function AddUser() {
     };
 
     const apiCall = async (email,firstName,lastName,password)=>{
-        const response = await axios.post("http://localhost:4000/addUser",{
+        const response = await axios.post("http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/addUser",{
             email:email,
             firstName:firstName,
             lastName:lastName,

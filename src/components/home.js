@@ -22,7 +22,7 @@ const Home = ()=>{
             const id = sessionStorage.getItem("userId");
 
             //todo change userId
-            const homeData = await axios.post('http://localhost:4000/home',{
+            const homeData = await axios.post('http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/home',{
 
                     userId:id
 

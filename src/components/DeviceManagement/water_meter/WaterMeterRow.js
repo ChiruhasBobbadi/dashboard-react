@@ -61,7 +61,7 @@ const WaterMeterRow = (props)=>{
         console.log(data);
 
 
-        await axios.post('http://localhost:4000/updateDevice',data)
+        await axios.post('http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/updateDevice',data)
 
 
         handleCloseUpdateModal();

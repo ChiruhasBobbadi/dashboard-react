@@ -55,8 +55,9 @@ function App() {
 
                                   <Route path="/invoice" element={<Invoice />}></Route>
 
-                                  <Route path='/addUser' element={<AddUser/>}></Route>
                                   <Route path='/viewAllUsers' element={<ViewAllUsers/>}> </Route>
+                                  <Route path='/addUser' element={<AddUser/>}></Route>
+
 
                                   <Route path='/ManageUsers' element={<ManageUsers/>}> </Route>
 

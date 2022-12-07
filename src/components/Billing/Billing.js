@@ -31,7 +31,7 @@ const Billing=()=> {
         const call = async ()=>{
             const id = sessionStorage.getItem("userId");
             console.log(id);
-            const bill = await axios.post('http://localhost:4000/bill',{
+            const bill = await axios.post('http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/bill',{
                 data:{
                     userId:id
                 }

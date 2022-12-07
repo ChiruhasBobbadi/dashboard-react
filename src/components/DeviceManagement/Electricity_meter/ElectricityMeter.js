@@ -28,7 +28,7 @@ const ElectricityMeter=()=>{
         const call = async ()=>{
             const id = sessionStorage.getItem("userId");
             console.log(id);
-            const ElectricityMeterData = await axios.post('http://localhost:4000/allDevices',{
+            const ElectricityMeterData = await axios.post('http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/allDevices',{
                 type:'electric_meter',
                 data:{
                     userId:id
@@ -49,7 +49,7 @@ const ElectricityMeter=()=>{
         // deleting
 
 
-        await axios.post('http://localhost:4000/deleteDevice',{
+        await axios.post('http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/deleteDevice',{
             type:'electric_meter',
             data:{
                 userId:deviceData.id
@@ -95,8 +95,8 @@ const ElectricityMeter=()=>{
 
 
 
-        await axios.post('http://localhost:4000/addDevice',data)
-        const ElectricityMeterData = await axios.post('http://localhost:4000/allDevices',{
+        await axios.post('http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/addDevice',data)
+        const ElectricityMeterData = await axios.post('http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/allDevices',{
             type:'electric_meter',
             data:{
                 userId:userId
@@ -118,7 +118,7 @@ const ElectricityMeter=()=>{
         const call = async ()=>{
             const id = sessionStorage.getItem("userId");
             //console.log(id);
-            const ElectricityMeterData = await axios.post('http://localhost:4000/allDevices',{
+            const ElectricityMeterData = await axios.post('http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/allDevices',{
                 type:'electric_meter',
                 data:{
                     userId:id
