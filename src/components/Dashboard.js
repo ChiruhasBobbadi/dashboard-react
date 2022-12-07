@@ -13,7 +13,7 @@ import ControlConfigure from "./ControlConfigure/ControlConfigure";
 function Dashboard() {
     return (<>
         <NavBarLoggedIn/>
-        <Row>
+        <Row >
             <Col lg={2}> <LeftNavBar/> </Col>
             <Col lg={10}>
                 <Home/>

@@ -7,7 +7,7 @@ import logo from '../../images/logo.png'
 const NavBar =()=> {
     return (
 <>
-    <Navbar bg="dark" variant="dark">
+    <Navbar fixedTop style={{color:"white",marginTop:'2%' , marginLeft:'1%', marginRight:'1%', backgroundColor: "#009ACD" , backgroundSize:"0" }}>
         {/*<Container>*/}
             <Navbar.Brand href="" style={{fontSize:'35px'}}>
                 <img

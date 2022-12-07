@@ -59,11 +59,11 @@ function ServiceRequest() {
 
 
 
-            <Form onSubmit={submitHandler}>
+            <Form onSubmit={submitHandler} style={{marginLeft:'30%'}}>
 
-                <Form.Label  style={{marginTop:'5%'}}>Choose a Device Type</Form.Label>
+                <Form.Label  style={{marginTop:'5%'}}>Select Device</Form.Label>
                 <br/>
-                <Form.Select aria-label="Choose a Device Type"  style={{padding:'1%'}} name={'device'}>
+                <Form.Select aria-label="Select Device"  style={{padding:'1%'}} name={'device'}>
                     <option value="Fan">Fan</option>
                     <option value="Light">Light</option>
                     <option value="Camera">Camera</option>
@@ -79,8 +79,8 @@ function ServiceRequest() {
                                       required
                                       type="text"
                                       name="description"
-                                      placeholder="Enter your Service Request Complaint"
-                                      style={{marginTop:'7%'}}
+                                      placeholder="Write your concerns here"
+                                      style={{marginTop:'7%',aspectRatio:'16:9'}}
 
 
                         />

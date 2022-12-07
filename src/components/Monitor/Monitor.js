@@ -203,7 +203,7 @@ const Monitor = ()=> {
         <Row>
             <Col lg={2}> <LeftNavBar/> </Col>
             <Col lg={10}>
-                <Navbar expand="lg" variant="light" bg="light" fluid="true">
+                <Navbar expand="lg" variant="dark" bg="dark" fluid="true"  style={{color:"white",marginTop:'2%'}}>
 
                     <Nav>
                         <Nav.Link onClick={onClickHandler} style={{marginLeft:"10%"}}>Fan </Nav.Link>

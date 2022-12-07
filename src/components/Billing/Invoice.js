@@ -46,7 +46,9 @@ const Invoice=()=> {
     return (
         <>
             <NavBarLoggedIn/>
-            <div style={{ padding: 20 }}>
+            {/*style={{marginLeft:'20%' , color : path ==='fan'?'#009ACD':'inherit'} }*/}
+            {/*, background :'black',color:'white' */}
+            <div style={{ padding: 20  }}>
                 <Row>
                     <Col>
                         <h1 >Invoice</h1>
@@ -180,9 +182,9 @@ const Invoice=()=> {
                         NetTotal: {Math.round((data.electricityCost+data.waterCost) * 100) / 100} $
                     </td>
                 </tr>
-
                 </tbody>
                 </table>
+
 
 
 

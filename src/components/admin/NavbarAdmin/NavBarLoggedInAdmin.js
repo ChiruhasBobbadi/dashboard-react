@@ -20,7 +20,7 @@ const Navbar2 =(props)=>{
 
 
     return <>
-        <Navbar bg="dark" variant="dark">
+        <Navbar fixedTop style={{color:"white",marginTop:'2%' , marginLeft:'1%', marginRight:'1%', backgroundColor: "#009ACD" , backgroundSize:"0" }}>
             <Container>
                 <Navbar.Brand href="/viewAllUsers" style={{fontSize:'30px'}}>
                     <img
