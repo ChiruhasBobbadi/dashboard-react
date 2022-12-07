@@ -31,7 +31,7 @@ const Fan=()=>{
             const fanData = await axios.post('http://localhost:4000/allDevices',{
                 type:'fan',
                 data:{
-                    id:1
+                    id:id
                 }
             });
             console.log(fanData.data.data);
@@ -78,7 +78,7 @@ const Fan=()=>{
                 "type": "fan",
                 "data": {
                     "device_name":d.deviceName.value,
-                    "userId":1,
+                    "userId":userId,
                     "model" : d.model.value,
                     "installation_date":d.installationDate.value,
                     "id":d.deviceId.value,
@@ -101,7 +101,7 @@ const Fan=()=>{
         const fanData = await axios.post('http://localhost:4000/allDevices',{
             type:'fan',
             data:{
-                id:1
+                id:userId
             }
         });
         setData([...fanData.data.data]);
@@ -123,7 +123,7 @@ const Fan=()=>{
             const fanData = await axios.post('http://localhost:4000/allDevices',{
                 type:'fan',
                 data:{
-                    id:1
+                    id:id
                 }
             });
             console.log(fanData.data.data);
@@ -171,7 +171,7 @@ const Fan=()=>{
 
         <Modal  show={showAddModal} onHide={handleCloseAddModal}  size="xl">
             <Form onSubmit={onAddClickHandler}>
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title>View fan Information</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -290,7 +290,7 @@ const Fan=()=>{
                     <Button variant="secondary" onClick={handleCloseAddModal}>
                         Close
                     </Button>
-                    <Button variant="success" type={"submit"}>
+                    <Button variant="success" type={"submit"} >
                         Add
                     </Button>
                 </Modal.Footer>

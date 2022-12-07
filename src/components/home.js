@@ -20,11 +20,11 @@ const Home = ()=>{
 
         const call = async ()=>{
             const id = sessionStorage.getItem("userId");
-            console.log(id);
+
             //todo change userId
             const homeData = await axios.post('http://localhost:4000/home',{
 
-                    userId:1
+                    userId:id
 
             });
             console.log(homeData);
@@ -59,7 +59,7 @@ const Home = ()=>{
                             <Card.Title>Total Usage</Card.Title>
 
                             <Card.Text>
-                                {Math.round(((data.fanMetrics+data.lightMetrics+data.weatherSensorMetrics+data.cameraMetrics)/1000) * 100) / 100} KWH
+                                {Math.round((data.fanMetrics+data.lightMetrics+data.weatherSensorMetrics+data.cameraMetrics)/1000)} KWH
                             </Card.Text>
 
                         </Card.Body>

@@ -32,7 +32,7 @@ const Camera=()=>{
             const cameraData = await axios.post('http://localhost:4000/allDevices',{
                 type:'camera',
                 data:{
-                    userId:1
+                    userId:id
                 }
             });
             console.log(cameraData.data.data);
@@ -95,7 +95,7 @@ const Camera=()=>{
         const cameraData = await axios.post('http://localhost:4000/allDevices',{
             type:'camera',
             data:{
-                userId:1
+                userId:userId
             }
         });
         setData([...cameraData.data.data]);
@@ -118,7 +118,7 @@ const Camera=()=>{
             const cameraData = await axios.post('http://localhost:4000/allDevices',{
                 type:'camera',
                 data:{
-                    userId:1
+                    userId:id
                 }
             });
             console.log(cameraData.data.data);
@@ -166,7 +166,7 @@ const Camera=()=>{
 
         <Modal  show={showAddModal} onHide={handleCloseAddModal}  size="xl">
             <Form onSubmit={onAddClickHandler}>
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title>View camera Information</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>

@@ -38,7 +38,7 @@ const ElectricityMeterRow = (props)=>{
         let d = event.target;
         const data =
             {
-                "type": "electricityMeter",
+                "type": "electric_meter",
                 "data": {
                     "device_name":d.deviceName.value,
                     "userId":userId,
@@ -89,7 +89,7 @@ const ElectricityMeterRow = (props)=>{
 
         {/*view modal*/}
         <Modal show={show} onHide={handleClose}  size="xl">
-            <Modal.Header closeButton>
+            <Modal.Header >
                 <Modal.Title>View electricityMeter Information</Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -163,7 +163,7 @@ const ElectricityMeterRow = (props)=>{
 
         <Modal  show={showUpdateModal} onHide={handleCloseUpdateModal}  size="xl">
             <Form onSubmit={onUpdateClickHandler}>
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title>View electricityMeter Information</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>

@@ -41,7 +41,7 @@ const CameraRow = (props)=>{
                 "type": "camera",
                 "data": {
                     "device_name":d.deviceName.value,
-                    "userId":1,
+                    "userId":userId,
                     "model" : d.model.value,
                     "installation_date":d.installationDate.value,
                     "id":d.deviceId.value,
@@ -89,7 +89,7 @@ const CameraRow = (props)=>{
 
         {/*view modal*/}
         <Modal show={show} onHide={handleClose}  size="xl">
-            <Modal.Header closeButton>
+            <Modal.Header >
                 <Modal.Title>View camera Information</Modal.Title>
             </Modal.Header>
             <Modal.Body>

@@ -31,7 +31,7 @@ const WeatherSensor=()=>{
             const WeatherSensorData = await axios.post('http://localhost:4000/allDevices',{
                 type:'weatherSensor',
                 data:{
-                    userId:1
+                    userId:id
                 }
             });
             console.log(WeatherSensorData.data.data);
@@ -168,7 +168,7 @@ const WeatherSensor=()=>{
 
         <Modal  show={showAddModal} onHide={handleCloseAddModal}  size="xl">
             <Form onSubmit={onAddClickHandler}>
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title>View WeatherSensor Information</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>

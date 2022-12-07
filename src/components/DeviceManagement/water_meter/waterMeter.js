@@ -31,7 +31,7 @@ const WaterMeter=()=>{
             const WaterMeterData = await axios.post('http://localhost:4000/allDevices',{
                 type:'water_meter',
                 data:{
-                    id:1
+                    id:id
                 }
             });
             console.log(WaterMeterData.data.data);
@@ -76,7 +76,7 @@ const WaterMeter=()=>{
                 "type": "water_meter",
                 "data": {
                     "device_name":d.deviceName.value,
-                    "userId":1,
+                    "userId":userId,
                     "model" : d.model.value,
                     "installation_date":d.installationDate.value,
                     "id":d.deviceId.value,
@@ -99,7 +99,7 @@ const WaterMeter=()=>{
         const WaterMeterData = await axios.post('http://localhost:4000/allDevices',{
             type:'water_meter',
             data:{
-                id:1
+                id:userId
             }
         });
         setData([...WaterMeterData.data.data]);
@@ -121,7 +121,7 @@ const WaterMeter=()=>{
             const WaterMeterData = await axios.post('http://localhost:4000/allDevices',{
                 type:'water_meter',
                 data:{
-                    id:1
+                    id:id
                 }
             });
             console.log(WaterMeterData.data.data);
@@ -169,7 +169,7 @@ const WaterMeter=()=>{
 
         <Modal  show={showAddModal} onHide={handleCloseAddModal}  size="xl">
             <Form onSubmit={onAddClickHandler}>
-                <Modal.Header closeButton>
+                <Modal.Header >
                     <Modal.Title>View WaterMeter Information</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
