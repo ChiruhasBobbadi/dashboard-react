@@ -67,6 +67,7 @@ return <>
                 <tr>
                     <th>User ID</th>
                     <th>Device Type</th>
+                    <th>Request Type</th>
                     <th>Description</th>
                     <th>Created At</th>
                     <th>Actions</th>
@@ -81,6 +82,7 @@ return <>
                         return <tr id={el.id}>
                             <td>{el.userId}</td>
                             <td>{el.device}</td>
+                            <td>{el.requestType}</td>
                             <td>{el.description}</td>
                             <td>{el.dateCreated}</td>
 

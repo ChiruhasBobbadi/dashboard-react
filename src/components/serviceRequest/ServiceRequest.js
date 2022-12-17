@@ -25,19 +25,21 @@ function ServiceRequest() {
 
         const device = event.target.device.value;
         const description = event.target.description.value;
+        const requestType = event.target.requestType.value;
 
         //unsetting value
 
 
-      await submit(device,description);
+      await submit(device,description,requestType);
         event.target.description.value="";
 
     }
-    const submit = async(device, description)=>{
+    const submit = async(device, description,requestType)=>{
         const response = await axios.post("http://localhost:4000/service",{
             device:device,
             userId:sessionStorage.getItem("userId"),
-            description:description
+            description:description,
+            requestType: requestType
         });
 
         handleShow();
@@ -70,6 +72,15 @@ function ServiceRequest() {
                     <option value="Electricity_Meter">Electricity Meter</option>
                     <option value="Water_Meter">Water Meter</option>
                     <option value="Weather Sensor">Weather Sensor</option>
+                </Form.Select>
+                <br/>
+                <Form.Label  style={{marginTop:'5%'}}>Request Type</Form.Label>
+                <br/>
+                <Form.Select aria-label="Select Device"  style={{padding:'1%'}} name={'requestType'}>
+                    <option value="Device Fault">Device Fault</option>
+                    <option value="Connection Fault">Connection Fault</option>
+                    <option value="Incorrect Metrics">Incorrect Metrics</option>
+                    <option value="Others">Others</option>
                 </Form.Select>
 
 
